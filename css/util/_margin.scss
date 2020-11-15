@@ -1,0 +1,17 @@
+$margins: 10, 20, 5;
+
+@mixin margin($param) {
+  margin: unquote($param + "px");
+}
+
+@each $margin in $margins {
+  .m-#{$margin} {
+    @include margin($margin);
+  }
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
